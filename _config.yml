@@ -17,19 +17,19 @@ social:
 
 # THEME SETTINGS
 navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
+  - { name: "Home", link: "/" }
+  - { name: "About", link: "/about" }
+  - { name: "Contact", link: "/contact" }
 
 tagline: >
-  Just a developer's online notebook &amp; SEO best practices
+  Just a developer's online notebook
 
 hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 email: info@aitorlozano.com # email for form submission
 
 twitter_username: aikelb # replace with your_twitter_username or comment to remove link from footer
-github_username:  aikelb # replace with your_github_username or comment to remove link from footer
+github_username: aikelb # replace with your_github_username or comment to remove link from footer
 instagram_username: aikelb # replace with your_instagram_username or comment to remove link from footer
 
 disqus:
@@ -56,7 +56,7 @@ exclude:
   - gulpfile.js
   - sleek.jpg
 
-include: ['_pages']
+include: ["_pages"]
 permalink: /:title/
 
 compress_html:
