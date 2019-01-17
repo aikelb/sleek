@@ -9,21 +9,25 @@ Con la nueva versión de MacOS Mojave, mi MacbookPro de mediadios de 2010 dejar�
 
 No tengo planes de dejar de utilizar el portátil, así que (mientras Nvidia me deje) Linux se encargará de mantenerlo funcionando.
 
-##Distribución de Linux
+## Distribución de Linux
+
 Hay distribuciones de Linux para aburrir. En [DistroWatch](https://distrowatch.com/?language=ES) mantienen un ranking de popularidad por distribuciones que puede ser una guía más que interesante. En los últimos años las distribuciones basadas en Arch con una instalación guiada (como Manjaro o AntergOS) han subido bastante. Su actualización continua o distribución Rolling Release es estupenda para utilizar siempre la última versión del software, pero puede ser un arma de doble filo en lo que a drivers se refiere. Para mi gusto, la configuración inicial requiere un esfuerzo que no me merece la pena.
 
 Aprovechando las nuevas versiones de [elementary OS 5.0 Juno](https://elementary.io/es/) y [Ubuntu 18.10](https://www.ubuntu.com/), me animé a probar ambas distribuciones en el portátil. elementary OS ha crecido sin parar en los últimos años, pero tuve algunos problemas gráficos al intentar utilizar Unity3D. Finalmente, las [mejoras de rendimiento](https://www.omgubuntu.co.uk/2018/10/ubuntu-18-10-released-review) de Ubuntu 18.10 hacen que sea mi opción preferida por el momento.
 
-![Desktop screenshot][ubuntu1810] "Ubuntu 18.10 - MacbookPro 6,2"
+![Desktop screenshot][ubuntu]
 
-##Resolución de problemas
+## Resolución de problemas
+
 No todo fue bonito tras la instalación, así que ahí van los problemas que me encontré durante la instalación.
 
-##Nvidia drivers + EFI boot
+## Nvidia drivers + EFI boot
+
 Instalar los drivers y reiniciar el equipo daban como resultado un pantallazo negro eterno y costó lo suyo dar con la [solución](https://askubuntu.com/questions/264247/proprietary-nvidia-drivers-with-efi-on-mac-to-prevent-overheating).
 
 Instalamos los drivers propietarios y no reiniciamos.
-![Software & Updates][additional-drivers] "Instalación de drivers adicionales"
+
+![Software & Updates](/assets/img/posts/additional-drivers_sm.png)
 
 Buscamos los identificadores del bus PCI-E, que serán el primer 'display' y la entrada justo antes. En mi caso, segundo y tercer dispositivos:
 
@@ -70,7 +74,8 @@ Cambiamos permisos y actualizamos grub:
 
 Al reiniciar el equipo el driver de Nvidia debería funcionar correctamente.
 
-##Iluminación del teclado
+## Iluminación del teclado
+
 La solución es plug & play:
 
 ```shell
@@ -78,7 +83,8 @@ La solución es plug & play:
 ~$ sudo service pommed start
 ```
 
-##Ventiladores y control de temperatura
+## Ventiladores y control de temperatura
+
 [mbpfan](https://github.com/dgraziotin/mbpfan) lleva bastantes años funcionando. En el mismo repositorio están las instrucciones para su instalación. Esta es la configuración que por ahora me funciona bien:
 
 ```shell
@@ -93,9 +99,12 @@ max_temp = 86
 polling_interval = 5
 ```
 
-##Soporte 7-zip
+## Soporte 7-zip
+
 Y ya que estamos, podemos añadir soporte para ficheros 7-zip:
 
 ```shell
 sudo apt-get install p7zip-full
 ```
+
+[ubuntu]: /assets/img/posts/ubuntu1810_lg.png "Ubuntu 18.10 - MacbookPro 6,2"
