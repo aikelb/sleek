@@ -27,7 +27,7 @@ Instalar los drivers y reiniciar el equipo daban como resultado un pantallazo ne
 
 Instalamos los drivers propietarios y no reiniciamos.
 
-![Software & Updates](/assets/img/posts/additional-drivers_sm.png)
+![Software & Updates](/assets/img/posts/additional-drivers_sm.png){: .center-image}
 
 Buscamos los identificadores del bus PCI-E, que serán el primer 'display' y la entrada justo antes. En mi caso, segundo y tercer dispositivos:
 
