@@ -18,8 +18,8 @@ social:
 # THEME SETTINGS
 navigation: # Navigation links
   - { name: "Home", link: "/" }
-  - { name: "About", link: "/about" }
-  - { name: "Contact", link: "/contact" }
+  - { name: "ULPGC", link: "/ulpgc" }
+#  - { name: "Contact", link: "/contact" }
 
 tagline: >
   Just a developer's online notebook
