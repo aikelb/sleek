@@ -4,7 +4,7 @@ author: aikelb # You :P
 description: > # Meta description of Homepage
   Just an online notebook.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://aikelb.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "aitorlozano.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
