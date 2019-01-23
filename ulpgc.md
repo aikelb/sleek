@@ -8,19 +8,19 @@ permalink: /ulpgc/
 
 >Clases
 
-- Juiciness[](http://aitorlozano.com/slides/juiciness)
-- Juiciness II[](http://aitorlozano.com/slides/juiciness-ii)
+- Juiciness[](http://slides.aitorlozano.com/juiciness)
+- Juiciness II[](http://slides.aitorlozano.com/juiciness-ii)
 
 ----
 >Taller
-- [Devtips](https://aitorlozano.com/slides/devtips)
-- [Patrones de diseño](http://aitorlozano.com/slides/design-patterns/)
-- Multijugador[](http://aitorlozano.com/slides/multiplayer/slides)
-- Periféricos[](http://aitorlozano.com/slides/perifericos)
-- [Builds y persistencia](http://aitorlozano.com/slides/persistencia)
+- [Devtips](https://slides.aitorlozano.com/devtips)
+- [Patrones de diseño](http://slides.aitorlozano.com/design-patterns/)
+- Multijugador[](http://slides.aitorlozano.com/multiplayer/slides)
+- Periféricos[](http://slides.aitorlozano.com/perifericos)
+- [Builds y persistencia](http://slides.aitorlozano.com/persistencia)
 
 ----
 >Extras
 
-- [RenderToTexture](http://aitorlozano.com/slides/raycast)
-- Reveal.JS[](https://aitorlozano.com/slides/reveal)
+- [RenderToTexture](http://slides.aitorlozano.com/raycast)
+- Reveal.JS[](https://slides.aitorlozano.com/reveal)
