@@ -4,23 +4,20 @@ title: ULPGC
 permalink: /ulpgc/
 ---
 
-####Experto universitario en creación de videojuegos.
+## Experto universitario en creación de videojuegos.
 
->Clases
+### Clases
 
 - Juiciness[](http://slides.aitorlozano.com/juiciness)
 - Juiciness II[](http://slides.aitorlozano.com/juiciness-ii)
 
-----
->Taller
-- [Devtips](https://slides.aitorlozano.com/devtips)
+### Taller
+- [Devtips](http://slides.aitorlozano.com/devtips)
 - [Patrones de diseño](http://slides.aitorlozano.com/design-patterns/)
 - Multijugador[](http://slides.aitorlozano.com/multiplayer/slides)
 - Periféricos[](http://slides.aitorlozano.com/perifericos)
 - [Builds y persistencia](http://slides.aitorlozano.com/persistencia)
 
-----
->Extras
-
+### Extras
 - [RenderToTexture](http://slides.aitorlozano.com/raycast)
-- Reveal.JS[](https://slides.aitorlozano.com/reveal)
+- Reveal.JS[](http://slides.aitorlozano.com/reveal)
