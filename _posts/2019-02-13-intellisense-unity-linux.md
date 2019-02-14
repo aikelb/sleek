@@ -2,7 +2,7 @@
 layout: post
 title: "Intellisense en Ubuntu con Unity 2018+"
 featured-img:
-categories: [Software]
+categories: [Guides]
 ---
 
 Mientras utilizaba VSCode con Unity en Ubuntu 18.10 como editor principal, al llegar las últimas actualizaciones dejó de funcionar el autocompletado con un fantástico:
