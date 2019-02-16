@@ -95,5 +95,20 @@ ee site update example.com --ssl=le
 # ee site update example.com --ssl=le --wildcard
 ```
 
+# Otros comandos
+
+Si necesitamos forzar una renovación de la caché y no podemos acceder al panel de admin, podemos relanzar el servicio de redis con:
+
+```
+ee service restart redis
+```
+
+Hay veces que al reiniciar el servidor la BBDD o algún otro servicio de easyengine no arranca correctamente.
+Es un bug conocido, por ahora una forma de evitarlo es reiniciando de nuevo o ejecutando:
+
+```
+ee service enable db --force
+```
 
 [Fuente](https://venturedawn.com/blogging/migrate-wordpress-easyengine-v4/2667/).
+[Error 502](https://community.easyengine.io/t/502-bad-gateway-error-after-server-reboot/11717/3)
