@@ -97,17 +97,36 @@ ee site update example.com --ssl=le
 
 # Otros comandos
 
+## Renovación de caché
 Si necesitamos forzar una renovación de la caché y no podemos acceder al panel de admin, podemos relanzar el servicio de redis con:
 
 ```
 ee service restart redis
 ```
 
+## Reinicios del servidor
 Hay veces que al reiniciar el servidor la BBDD o algún otro servicio de easyengine no arranca correctamente.
 Es un bug conocido, por ahora una forma de evitarlo es reiniciando de nuevo o ejecutando:
 
 ```
 ee service enable db --force
+```
+
+## Redirecciones www
+Por algún motivo aunque tengamos bien configurado el subdominio www, nginx no hace bien la redirección para servirlo. Especialmente cuando hay varias páginas en un mismo servidor.
+Esto puede ser porque falte el fichero en el servicio de nginx-proxy que resuelve esta redirección.
+El archivo debe estar en la ruta ```/opt/easyengine/services/nginx-proxy/conf.d/domain.com-redirect.conf``` y su contenido debería ser:
+```
+server {
+  listen  80;
+  server_name  www.domain.com;
+  return  301 http://domain.com$request_uri;
+}
+```
+
+Una vez lo tengamos, con recargar el servicio debería bastar:
+```
+ee service reload nginx-proxy
 ```
 
 [Fuente](https://venturedawn.com/blogging/migrate-wordpress-easyengine-v4/2667/).
