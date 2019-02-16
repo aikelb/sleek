@@ -60,12 +60,29 @@ chown -R www-data:www-data wp-content
 ```
 
 Restaurar la BBDD tiene truco. Ya no podemos acceder a mysql como en el servidor anterior porque ahora es un contenedor de docker.
-No sabemos cual es la contraseña de root configurada, pero podemos conectarnos al contenedor con algo de este estilo:
+Lo primero que necesitamos es obtener el identificador del container:
 
 ```
-docker exec -i ee-global-db mysql -udbuser -pdbpass --database=dbname < dump.sql
+# docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                                      NAMES
+f3c3a1fc727c        easyengine/mariadb:v4.0.0       "docker-entrypoint.s…"   3 minutes ago       Up 3 minutes        3306/tcp                                   services_global-db_1
+```
 
+En el listado buscamos el id del contenedor de mariadb.
+No sabemos cual es la contraseña de root de la base de datos, pero podemos conectarnos al contenedor con los datos del blog que acabamos de montar con algo de este estilo:
+
+```
+docker exec -i f3c3a1fc727c mysql -udbuser -pdbpass --database=dbname < dump.sql
+```
+
+Si por lo que fuera, necesitamos acceder a la BBDD como root, podemos usar:
+```
 docker exec -it f3c3a1fc727c bash -c 'mysql -uroot -p${MYSQL_ROOT_PASSWORD}'
+```
+
+Y no estaría de más limpiar el historial de comandos que contiene la contraseña de las BBDD:
+```
+history -c
 ```
 
 # Paso 5: Activamos el SSL

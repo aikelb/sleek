@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intellisense en Ubuntu con Unity 2018+"
-featured-img:
+featured-img: intellisense
 categories: [Guides]
 ---
 
