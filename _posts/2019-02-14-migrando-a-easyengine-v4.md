@@ -95,7 +95,7 @@ ee site update example.com --ssl=le
 # ee site update example.com --ssl=le --wildcard
 ```
 
-# Otros comandos
+# Otros comandos y resolución de problemas
 
 ## Renovación de caché
 Si necesitamos forzar una renovación de la caché y no podemos acceder al panel de admin, podemos relanzar el servicio de redis con:
@@ -128,6 +128,18 @@ Una vez lo tengamos, con recargar el servicio debería bastar:
 ```
 ee service reload nginx-proxy
 ```
+
+## Error nginx: [emerg] host not found in upstream
+Este problema se puede dar por dos motivos: 
+### 1. Nginx intenta lanzarse y la dependencia php-fpm no está en marcha.
+En el docker-compose de cada sitio se establece esa dependencia, pero durante el arranque a veces puede fallar el inicio de una de las dependencias. La solución más rápida es desactivar y volver a activar el sitio. De esta forma easyengine parará y elminará todas las instancias de docker y las volverá a lanzar en el orden correcto.
+```
+ee site disable domain.com
+ee site enable domain.com
+```
+### 2. No se puede resolver las dns del dominio.
+En las últimas versiones de Nginx, la validación de las dns del dominio pueden comprobarse por IPv6. 
+Para arreglarlo, simplemente hay que configurar correctamente un registro AAAA apuntando a la IPv6 de nuestro servidor en @.
 
 [Fuente](https://venturedawn.com/blogging/migrate-wordpress-easyengine-v4/2667/).
 [Error 502](https://community.easyengine.io/t/502-bad-gateway-error-after-server-reboot/11717/3)
