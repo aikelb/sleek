@@ -13,9 +13,11 @@ Con este fragmento debería ser suficiente, estableciendo correctamente el valor
 
 ```
 location / {
-	root /var/www/site.com/htdocs;
+  
+  root /var/www/site.com/htdocs;
+  
   index  index.html index.htm;
-	autoindex on;
+  autoindex on;
   autoindex_localtime on;
            
   location ~* ^.*\.(js)$ {
